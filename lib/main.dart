@@ -125,12 +125,12 @@ class _CameraScreenState extends State<CameraScreen> {
 
   Future<void> detectLabels() async {
     final FirebaseVisionImage visionImage = FirebaseVisionImage.fromFilePath(imagePath);
-    final LabelDetector labelDetector = FirebaseVision.instance.labelDetector();
-    final List<Label> labels = await labelDetector.detectInImage(visionImage);
+    final ImageLabeler labelDetector = FirebaseVision.instance.imageLabeler();
+    final List<ImageLabel> labels = await labelDetector.processImage(visionImage);
 
     List<String> labelTexts = new List();
-    for (Label label in labels) {
-      final String text = label.label;
+    for (ImageLabel label in labels) {
+      final String text = label.text;
 
       labelTexts.add(text);
     }
@@ -273,7 +273,7 @@ class ItemsList extends StatelessWidget {
                           child: DefaultTextStyle(
                             softWrap: true,
                             //overflow: TextOverflow.,
-                            style: Theme.of(context).textTheme.subhead,
+                            style: Theme.of(context).textTheme.subtitle1,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
@@ -305,6 +305,7 @@ class FlutterVisionApp extends StatelessWidget {
 }
 
 Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   // Fetch the available cameras before initializing the app.
   try {
     cameras = await availableCameras();
