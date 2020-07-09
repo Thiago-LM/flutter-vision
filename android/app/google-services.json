@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "984975512519",
+    "firebase_url": "https://ml-vision-test-35c2f.firebaseio.com",
+    "project_id": "ml-vision-test-35c2f",
+    "storage_bucket": "ml-vision-test-35c2f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:984975512519:android:8a5e9bafc7383e3dacbfe2",
+        "android_client_info": {
+          "package_name": "com.example.flutter_vision"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "984975512519-juod64u54lm8c1fhn85d1vebvi6r3srm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbNCpQeDOAp24Bzs67p5iwsNTSSIILFMI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "984975512519-juod64u54lm8c1fhn85d1vebvi6r3srm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
